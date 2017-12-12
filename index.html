@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <title>Mini</title>
+    <meta name="description" content="Månadens in- och utlista.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="center content">
+		<form class="center" name="in-and-out-form">
+			<label>
+				Föremål<br>
+				<input type="text"
+					   class="js-form-binding"
+					   data-property-name="name">
+			</label>
+			<label>
+				Datum<br>
+				<input type="date"
+					   class="js-form-binding"
+					   data-property-name="date">
+			</label>
+			<label>
+				Tankar<br>
+				<textarea class="js-form-binding"
+						  data-property-name="thoughts"></textarea>
+			</label>
+			<label>
+				Ut
+				<input type="radio" 
+				       name="direction"
+				       class="js-direction-out"
+				       value="out">
+	        </label>
+	        <label>
+        		In
+		        <input type="radio" 
+				       name="direction"
+				       value="in">
+	        </label>
+			<input type="button" 
+				   value="Spara"
+				   class="js-submit-in-and-out-form">
+		</form>	
+	</div>
+	<div class="js-in-and-out-overview"></div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

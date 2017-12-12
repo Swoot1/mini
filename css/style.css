@@ -1,0 +1,23 @@
+body {
+	font-family: arial;
+}
+input, label {
+	display: block;
+}
+label {
+	font-weight: 600;
+	font-size: 14px;
+}
+input, textarea {
+	border: 1px solid #ccc;
+	padding: 5px;
+}
+label {
+	margin-top: 15px;
+}
+.content {
+	width: 300px;
+}
+.center {
+	margin: auto auto;
+}
