@@ -1,8 +1,9 @@
 body {
 	font-family: arial;
 }
-input, label {
+label.block, label.block input, label.block textarea {
 	display: block;
+	width: 100%;
 }
 label {
 	font-weight: 600;
@@ -20,4 +21,16 @@ label {
 }
 .center {
 	margin: auto auto;
+}
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+li .header {
+	font-weight: 800;
+}
+
+ul li ul li {
+	margin-left: 10px;
 }

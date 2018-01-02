@@ -3,49 +3,61 @@
 <head>
     <meta charset="utf-8">
     <title>Mini</title>
-    <meta name="description" content="Månadens in- och utlista.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" 
+          content="Månadens in- och utlista.">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" 
+          href="css/style.css">
+    <link type="text/css" 
+          rel="stylesheet" 
+          href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase-database.js"></script>
 </head>
 <body>
 	<div class="center content">
-		<form class="center" name="in-and-out-form">
-			<label>
+		<form class="center" name="item-form">
+			<label class="block">
 				Föremål<br>
 				<input type="text"
 					   class="js-form-binding"
 					   data-property-name="name">
 			</label>
-			<label>
+			<label class="block">
 				Datum<br>
 				<input type="date"
 					   class="js-form-binding"
 					   data-property-name="date">
 			</label>
-			<label>
-				Tankar<br>
+			<label class="block">
+				Kommentar<br>
 				<textarea class="js-form-binding"
-						  data-property-name="thoughts"></textarea>
+						  data-property-name="comment"></textarea>
 			</label>
 			<label>
 				Ut
 				<input type="radio" 
 				       name="direction"
 				       class="js-direction-out"
-				       value="out">
-	        </label>
-	        <label>
-        		In
-		        <input type="radio" 
+				       value="out"
+				       checked>
+			</label>
+			<label>
+				In
+			    <input type="radio" 
 				       name="direction"
 				       value="in">
-	        </label>
+			</label>
 			<input type="button" 
 				   value="Spara"
-				   class="js-submit-in-and-out-form">
+				   class="js-submit-item-form">
 		</form>	
+		<div class="js-login"></div>
+		<div class="js-item-overview"></div>
 	</div>
-	<div class="js-in-and-out-overview"></div>
     <script src="js/scripts.js"></script>
 </body>
 </html>
